@@ -30,7 +30,11 @@ app.get('/img', (request, response) => {
         const count = files.length
         const randomImg = files[Math.floor(Math.random() * count)]
 
-        response.json({ imgUrl: `${randomImg}` })
+        response.json({ 
+            imgUrl: `${randomImg}`,
+            imgNum: randomImg,
+            total: count
+        })
     })
 })
 
