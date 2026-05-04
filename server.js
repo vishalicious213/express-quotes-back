@@ -15,6 +15,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/img', (request, response) => {
     const imgPath = path.join(__dirname, 'public')
+    const category = request.query.category || 'default'
+    // const categoryPath = path.join(imgPath, category)
+    console.log(category)
+
     fs.readdir(imgPath, (err, files) => {
         if (err) {
             console.error(err)
