@@ -19,7 +19,7 @@ app.get('/img', (request, response) => {
     const categoryPath = path.join(imgPath, category)
     console.log(category, categoryPath)
 
-    fs.readdir(imgPath, (err, files) => {
+    fs.readdir(categoryPath, (err, files) => {
         if (err) {
             console.error(err)
             response.status(500).send('Error reading image directory')
