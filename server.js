@@ -33,7 +33,7 @@ app.get('/img', (request, response) => {
 
         response.json({ 
             imgUrl: `${randomImg}`,
-            imgNum: num,
+            imgNum: num + 1,
             total: count
         })
     })
